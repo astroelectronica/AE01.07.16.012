@@ -1,0 +1,26 @@
+*
+*time reference
+.meas tref1 find time when V(/out)=V(/sense) cross=1639
+.meas tref2 find time when V(/out)=V(/sense) cross=1640
+.meas tref3 find time when V(/out)=V(/sense) cross=1641
+*
+*frequency and duty
+.meas freq_sw param (1/(tref3-tref1))
+.meas time_cycle param (1/freq_sw)
+.meas time_duty param (tref2-tref1)
+.meas %_duty param ((time_duty*100)/time_cycle)
+*
+*out
+.meas voltage_max_vout max V(/out) from=tref1 to=tref3
+.meas voltage_min_vout min V(/out) from=tref1 to=tref3
+.meas voltage_rms_vout rms V(/out) from=tref1 to=tref3
+*
+*feedback
+.meas voltage_max_fb max V(/fb) from=tref1 to=tref3
+.meas voltage_min_fb min V(/fb) from=tref1 to=tref3
+.meas voltage_rms_fb rms V(/fb) from=tref1 to=tref3
+*
+*inductor
+.meas current_max_inductor max I(L1) from=tref1 to=tref3
+.meas current_min_inductor min I(L1) from=tref1 to=tref3
+.meas current_rms_inductor rms I(L1) from=tref1 to=tref3

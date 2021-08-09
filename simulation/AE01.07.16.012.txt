@@ -1,0 +1,9 @@
+VOUT=Vfb*(Rfb+Rref )/Rref
+*
+For Vout=3.3V
+VOUT=1.242V*(33K+20K)/20K
+VOUT=3.2913V
+*
+For Vout=5V
+VOUT=1.242V*(60.4K+20K)/20K
+VOUT=4.99284V

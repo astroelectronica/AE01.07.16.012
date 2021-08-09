@@ -1,0 +1,8 @@
+*load regulation +5V
+.include ../AE01.07.16.012.cir
+.param VIN=12
+.param Rser_Cout=0.5
+.step param ILOAD list 0.3 0.6 0.9
+.param Rfb=60.4k
+.param Rref=20k
+.tran 0 1m 0 uic

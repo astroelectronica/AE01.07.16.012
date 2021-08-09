@@ -1,0 +1,27 @@
+*********************************************************************
+*  NICHICON CORPORATION and MoDeCH confidential
+*  Date                 : 12/11/2015
+*  File Name            : PCV1J220MCL6GS_v100.lib
+*  Part Number          : PCV1J220MCL6GS
+*  Simulator            : PSpice
+*  Model Type           : RC-ladder 7 Elements Capacitor Model
+*  Parameter Ver.       : Ver.1.00
+*********************************************************************
+* Modeling Conditions:
+*   Temperature = 20 degC
+*   DC Bias Voltage = 0 V
+*   Small Signal Operation
+*********************************************************************
+* record (history):
+* Ver.1.00 12/11/2015
+*********************************************************************
+*$
+.SUBCKT PCV1J220MCL6GS 1 2
+L1 1 3 1.901e-009
+R1 3 4 0.015842
+C1 4 2 1.5059e-005
+R2 4 5 0.67529
+C2 5 2 3.5875e-006
+R3 5 6 10.8771
+C3 6 2 2.6241e-006
+.ENDS
